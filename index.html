@@ -87,8 +87,35 @@
   .hero .glow{position:absolute; inset:0; background:radial-gradient(50% 90% at 88% -10%, rgba(56,184,179,.20), transparent 60%); pointer-events:none}
   .hero .dots{position:absolute; top:30px; right:34px; opacity:.7; pointer-events:none}
   .hero-inner{position:relative; max-width:1180px; margin:0; padding:78px 28px 84px; display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center}
-  .eqi-big{font-size:clamp(96px,15vw,196px); font-weight:700; letter-spacing:-.04em; line-height:.86;
+  .eqi-big{font-size:clamp(64px,9vw,140px); font-weight:700; letter-spacing:-.04em; line-height:.84; margin-bottom:4px;
     background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; width:max-content}
+  .hbadge{display:inline-flex; align-items:center; gap:9px; font-family:"Poppins"; font-weight:600; font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--teal-deep); background:#fff; border:1px solid var(--line); border-radius:999px; padding:7px 15px; box-shadow:var(--shadow-sm); margin-bottom:22px}
+  .hbadge i{width:7px;height:7px;border-radius:50%;background:var(--teal); box-shadow:0 0 0 3px rgba(56,184,179,.18)}
+  .hero-head{font-family:"Poppins"; font-weight:700; font-size:clamp(26px,3.3vw,38px); line-height:1.08; letter-spacing:-.01em; color:var(--ink); margin:12px 0 16px; max-width:15ch}
+  .grad-text{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .hero-sub{font-size:16.5px; color:var(--ink-soft); max-width:54ch; margin:0 0 28px}
+  .eqi-tree{margin-top:34px}
+  .tree-scroll{overflow-x:auto; padding:6px 4px 12px}
+  .tree{display:flex; justify-content:center; min-width:max-content; margin:0 auto}
+  .tree ul{display:flex; justify-content:center; padding-top:26px; position:relative; margin:0; padding-left:0}
+  .tree li{list-style:none; position:relative; padding:26px 10px 0; display:flex; flex-direction:column; align-items:center}
+  .tree li::before,.tree li::after{content:""; position:absolute; top:0; right:50%; width:50%; height:26px; border-top:2px solid var(--line-strong)}
+  .tree li::after{right:auto; left:50%; border-left:2px solid var(--line-strong)}
+  .tree li:only-child::before,.tree li:only-child::after{display:none}
+  .tree li:only-child{padding-top:0}
+  .tree li:first-child::before,.tree li:last-child::after{border:0 none}
+  .tree li:last-child::before{border-right:2px solid var(--line-strong)}
+  .tree ul ul::before{content:""; position:absolute; top:0; left:50%; border-left:2px solid var(--line-strong); width:0; height:26px}
+  .tree > ul{padding-top:0}
+  .tnode{width:214px; background:var(--bg); border:1px solid var(--line); border-radius:13px; box-shadow:var(--shadow-sm); padding:15px; display:flex; gap:11px; text-align:left; position:relative; transition:.18s}
+  .tnode:hover{border-color:var(--purple-300); box-shadow:var(--shadow-md)}
+  .tnode:not(.tnode-root)::before{content:""; position:absolute; top:-8px; left:50%; transform:translateX(-50%); width:0;height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-top:8px solid var(--line-strong)}
+  .tnode-root{width:auto; justify-content:center; align-items:center; font-family:"Poppins"; font-weight:700; font-size:24px; letter-spacing:.05em; color:#fff; background:var(--grad); border:none; padding:14px 36px}
+  .tn-ic{width:34px;height:34px;border-radius:9px;background:var(--tint);display:flex;align-items:center;justify-content:center;flex:none}
+  .tn-ic svg{width:17px;height:17px;stroke:var(--purple);fill:none;stroke-width:1.8}
+  .tn-body b{font-family:"Poppins";font-weight:600;font-size:14px;color:var(--ink);display:block;line-height:1.22}
+  .tn-tag{font-family:"JetBrains Mono";font-size:9px;letter-spacing:.05em;text-transform:uppercase;color:var(--teal-deep);display:block;margin:3px 0 5px}
+  .tnode p{font-size:12px;color:var(--muted);margin:0;line-height:1.45}
   .eqi-bar{width:96px; height:6px; border-radius:99px; background:linear-gradient(90deg,var(--teal),var(--purple)); margin:22px 0 18px}
   .eqi-full{font-family:"Poppins"; font-weight:500; font-size:clamp(20px,3vw,30px); color:var(--teal-deep); letter-spacing:.01em; margin:0 0 30px}
   .cta-row{display:flex; flex-wrap:wrap; gap:14px; align-items:center}
@@ -357,7 +384,8 @@
     </button>
     <p class="nav-label">On this page</p>
     <nav class="nav" id="nav">
-      <a href="#types"><span class="dot"></span>EQI types</a>
+      <a href="#what"><span class="dot"></span>What is EQI?</a>
+      <a href="#types"><span class="dot"></span>Ways to generate EQI</a>
       <a href="#levels"><span class="dot"></span>Levels &amp; categories</a>
       <a href="#upload"><span class="dot"></span>How to upload report</a>
       <a href="#tools"><span class="dot"></span>Supported tools</a>
@@ -378,10 +406,10 @@
       <svg class="dots" width="150" height="64" aria-hidden="true"></svg>
       <div class="hero-inner">
         <div>
-          <span class="eyebrow">User guide</span>
+                    <span class="hbadge"><i></i>Now live · Engineering Quality Index</span>
           <div class="eqi-big">EQI</div>
-          <div class="eqi-bar"></div>
-          <p class="eqi-full">Engineering Quality Index</p>
+          <h1 class="hero-head">Your code finally has <span class="grad-text">a report card.</span></h1>
+          <p class="hero-sub">EQI scores every repo across Code Quality, Security, Testing, Infra and more — automatically, every time you push. No spreadsheets. No guesswork. Just a number you can be proud of (or fix fast).</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#upload">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg>
@@ -414,70 +442,66 @@
       </div>
     </section>
 
+    <!-- What is EQI -->
+    <section id="what" class="block">
+      <div class="wrap">
+        <span class="eyebrow"><svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M7 5l8 7-8 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Overview</span>
+        <h2 class="title">What is EQI?</h2>
+        <p class="lead">The Engineering Quality Index is a centralized view of quality, security and test coverage across your repositories and projects. It reads the reports your tools already generate, scores each category automatically, and rolls everything up into a single index you can track over time — so engineering health is something you can actually see.</p>
+
+        <h3 class="sub-h" style="margin-top:42px">This isn’t a compliance checkbox</h3>
+        <p class="sub-p">EQI exists so that good engineering work gets seen — and gaps get fixed before clients find them.</p>
+        <div class="grid g2" style="margin-top:22px">
+          <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><h3>Fewer production fires</h3><p>Catch dependency vulnerabilities and misconfigurations before they ship — not after a client reports them.</p></div>
+          <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 12.9 17 22l-5-3-5 3 1.5-9.1"/></svg></div><h3>Recognition that’s earned</h3><p>A repo climbing from D to B is visible proof of work — to your lead, your PM, and leadership.</p></div>
+          <div class="card"><div class="ico teal"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 2.4 3.4-.6.6 3.4L21 12l-2.6 2.4.6 3.4-3.4.6L12 22l-2.4-2.6-3.4.6.6-3.4L3 12l2.6-2.4-.6-3.4 3.4.6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Client trust, quantified</h3><p>“90% Application Security” is a stronger story than “we think it’s fine.”</p></div>
+          <div class="card"><div class="ico teal"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="16 8 10 10 8 16 14 14 16 8"/></svg></div><h3>Know exactly what to fix next</h3><p>No more guessing — the lowest-scoring category tells you exactly where to focus this sprint.</p></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Types -->
     <section id="types" class="block">
       <div class="wrap">
-        <span class="eyebrow"><svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M7 5l8 7-8 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Types</span>
-        <h2 class="title">EQI types</h2>
-        <p class="lead">Reports reach EQI through an automated pipeline or a manual upload. Tap a type to see when to use it — most teams mix both.</p>
+        <span class="eyebrow"><svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M7 5l8 7-8 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Generating EQI</span>
+        <h2 class="title">Ways to generate EQI</h2>
+        <p class="lead">There are two ways to feed EQI. An automated pipeline scores reports on every CI/CD push and comes in two setups, while a manual upload covers anything that runs outside a pipeline.</p>
 
-        <div class="types-tree">
-          <div class="tt-parent"><div class="node-parent">EQI</div></div>
-          <div class="tt-trunk" aria-hidden="true"></div>
-          <div class="tt-row">
-            <div class="tt-col">
-              <span class="arr" aria-hidden="true"></span>
-              <details class="node-card">
-                <summary>
-                  <span class="nico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span>
-                  <span class="ntext"><b>Automated Pipeline</b><span>Recommended</span></span>
-                  <svg class="nchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-                </summary>
-                <div class="ndesc">
-                  Integrated directly with your CI/CD pipeline, so reports are picked up and scored on every run with no manual steps. It comes in two setups:
-                  <div class="subtree">
-                    <div class="sub-conn" aria-hidden="true"></div>
-                    <div class="subcard">
-                      <span class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>
-                      <div>
-                        <span class="sb">Mindbowser GitHub Projects</span>
-                        <span class="stag">Internal · Fixed-cost</span>
-                        <p>Wired into the standard internal pipeline for Mindbowser’s own GitHub projects — typically fixed-cost work.</p>
-                      </div>
-                    </div>
-                    <div class="sub-conn" aria-hidden="true"></div>
-                    <div class="subcard">
-                      <span class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M14 3h7v7M21 3l-9 9M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></span>
-                      <div>
-                        <span class="sb">External/Client Projects</span>
-                        <span class="stag">Client-side</span>
-                        <p>Plugs into a client project’s own CI/CD to collect and score reports from outside Mindbowser’s repositories.</p>
-                      </div>
-                    </div>
+        <div class="eqi-tree"><div class="tree-scroll"><div class="tree">
+          <ul>
+            <li>
+              <div class="tnode tnode-root">EQI</div>
+              <ul>
+                <li>
+                  <div class="tnode">
+                    <span class="tn-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span>
+                    <div class="tn-body"><b>Automated Pipeline</b><span class="tn-tag">Recommended</span><p>Scored automatically on every CI/CD run.</p></div>
                   </div>
-                </div>
-              </details>
-            </div>
-            <div class="tt-col">
-              <span class="arr" aria-hidden="true"></span>
-              <details class="node-card">
-                <summary>
-                  <span class="nico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg></span>
-                  <span class="ntext"><b>Manual upload</b><span>Flexible</span></span>
-                  <svg class="nchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-                </summary>
-                <div class="ndesc">
-                  Upload a JSON, HTML or other supported report by hand. Ideal for client projects or anywhere CI/CD isn’t integrated.
                   <ul>
-                    <li>No pipeline access required</li>
-                    <li>Works for one-off audits and client deliverables</li>
-                    <li>Same scoring as the automated path</li>
+                    <li>
+                      <div class="tnode">
+                        <span class="tn-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>
+                        <div class="tn-body"><b>Mindbowser GitHub Projects</b><span class="tn-tag">Internal · Fixed-cost</span><p>Internal repos wired into the standard pipeline.</p></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tnode">
+                        <span class="tn-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M14 3h7v7M21 3l-9 9M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></span>
+                        <div class="tn-body"><b>External/Client Projects</b><span class="tn-tag">Client-side</span><p>Client projects running their own CI/CD.</p></div>
+                      </div>
+                    </li>
                   </ul>
-                </div>
-              </details>
-            </div>
-          </div>
-        </div>
+                </li>
+                <li>
+                  <div class="tnode">
+                    <span class="tn-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg></span>
+                    <div class="tn-body"><b>Manual upload</b><span class="tn-tag">Flexible</span><p>Upload a supported report by hand.</p></div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div></div></div>
       </div>
     </section>
 
