@@ -116,8 +116,6 @@
   .tn-body b{font-family:"Poppins";font-weight:600;font-size:14px;color:var(--ink);display:block;line-height:1.22}
   .tn-tag{font-family:"JetBrains Mono";font-size:9px;letter-spacing:.05em;text-transform:uppercase;color:var(--teal-deep);display:block;margin:3px 0 5px}
   .tnode p{font-size:12px;color:var(--muted);margin:0;line-height:1.45}
-  .eqi-bar{width:96px; height:6px; border-radius:99px; background:linear-gradient(90deg,var(--teal),var(--purple)); margin:22px 0 18px}
-  .eqi-full{font-family:"Poppins"; font-weight:500; font-size:clamp(20px,3vw,30px); color:var(--teal-deep); letter-spacing:.01em; margin:0 0 30px}
   .cta-row{display:flex; flex-wrap:wrap; gap:14px; align-items:center}
   .btn{display:inline-flex; align-items:center; gap:9px; font-family:"Poppins"; font-weight:600; font-size:15px; padding:13px 22px; border-radius:999px; cursor:pointer; transition:.18s; border:1px solid transparent}
   .btn svg{width:15px;height:15px}
@@ -156,41 +154,6 @@
   .lvl-repo{background:var(--tint); color:var(--purple)}
   .lvl-proj{background:var(--tint-teal); color:var(--teal-deep)}
 
-  /* Types tree */
-  .types-tree{margin-top:34px}
-  .tt-parent{display:flex; justify-content:center}
-  .node-parent{font-family:"Poppins"; font-weight:700; font-size:26px; letter-spacing:.05em; color:#fff;
-    background:var(--grad); border:none; padding:14px 38px; border-radius:14px; box-shadow:var(--shadow-md)}
-  .tt-trunk{width:2px; height:30px; background:var(--line-strong); margin:8px auto 0}
-  .tt-row{position:relative; display:flex; justify-content:center; gap:24px; padding-top:34px; max-width:780px; margin:0 auto; align-items:flex-start}
-  .tt-row::before{content:""; position:absolute; top:0; left:24%; right:24%; height:2px; background:var(--line-strong)}
-  .tt-col{flex:1; min-width:0; max-width:360px; display:flex; flex-direction:column; align-items:center; position:relative}
-  .tt-col::before{content:""; position:absolute; top:-34px; left:50%; transform:translateX(-50%); width:2px; height:26px; background:var(--line-strong)}
-  .tt-col .arr{position:absolute; top:-10px; left:50%; transform:translateX(-50%); width:0;height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid var(--line-strong)}
-  .node-card{width:100%; background:var(--bg); border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-sm); transition:.18s}
-  .node-card[open],.node-card:hover{border-color:var(--purple-300); box-shadow:var(--shadow-md)}
-  .node-card summary{list-style:none; cursor:pointer; padding:18px 20px; display:flex; align-items:center; gap:13px; color:var(--ink)}
-  .node-card summary::-webkit-details-marker{display:none}
-  .node-card .nico{width:36px;height:36px;border-radius:10px;background:var(--tint);display:flex;align-items:center;justify-content:center;flex:none}
-  .node-card .nico svg{width:18px;height:18px;stroke:var(--purple);fill:none;stroke-width:1.8}
-  .node-card .ntext{flex:1; min-width:0}
-  .node-card .ntext b{font-family:"Poppins"; font-weight:600; font-size:16px; display:block}
-  .node-card .ntext span{font-family:"JetBrains Mono"; font-size:10px; letter-spacing:.05em; color:var(--teal-deep); text-transform:uppercase}
-  .node-card .nchev{flex:none; width:18px;height:18px; transition:transform .22s; color:var(--muted)}
-  .node-card[open] .nchev{transform:rotate(180deg)}
-  .node-card .ndesc{padding:0 20px 18px 69px; color:var(--muted); font-size:14px}
-  .node-card .ndesc ul{margin:8px 0 0; padding-left:18px}
-  .node-card .ndesc li{margin-bottom:5px}
-  .subtree{margin-top:8px}
-  .sub-conn{height:22px; position:relative}
-  .sub-conn::before{content:""; position:absolute; left:50%; top:0; transform:translateX(-50%); width:2px; height:22px; background:var(--line-strong)}
-  .sub-conn::after{content:""; position:absolute; left:50%; bottom:-1px; transform:translateX(-50%); width:0;height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-top:7px solid var(--line-strong)}
-  .subcard{display:flex; gap:11px; padding:13px 14px; border:1px solid var(--line); border-radius:11px; background:var(--bg-soft)}
-  .subcard .si{width:30px;height:30px;border-radius:9px;background:var(--tint-teal);display:flex;align-items:center;justify-content:center;flex:none}
-  .subcard .si svg{width:16px;height:16px;stroke:var(--teal-deep);fill:none;stroke-width:1.8}
-  .subcard .sb{font-family:"Poppins"; font-weight:600; font-size:14px; color:var(--ink); display:block; margin-bottom:1px}
-  .subcard .stag{font-family:"JetBrains Mono"; font-size:9.5px; letter-spacing:.05em; color:var(--purple); text-transform:uppercase}
-  .subcard p{margin:5px 0 0; font-size:13px; color:var(--muted)}
 
   /* Levels */
   .level{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--bg); box-shadow:var(--shadow-sm)}
@@ -265,7 +228,8 @@
   .band .rng{font-family:"JetBrains Mono"; font-weight:600; font-size:13px; color:var(--ink)}
   .band h4{font-size:14.5px; margin-bottom:2px}
   .band p{font-size:13px; color:var(--muted); margin:0}
-  .sub-h{font-size:18px; margin:38px 0 4px}
+  .sub-h{display:flex; align-items:center; font-size:18px; margin:38px 0 4px}
+  .gnum{display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%; background:var(--grad); color:#fff; font-family:"Poppins"; font-weight:600; font-size:14px; margin-right:12px; flex:none}
   .sub-p{font-size:14.5px; color:var(--muted); margin:0 0 4px}
   .grades{display:grid; gap:10px}
   .grade-row{display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:center; padding:12px 16px; border:1px solid var(--line); border-radius:12px; background:var(--bg); box-shadow:var(--shadow-sm)}
@@ -336,11 +300,6 @@
     .flow{grid-template-columns:1fr}
     .flow .conn{height:30px; transform:rotate(90deg)}
     .foot-inner{grid-template-columns:1fr 1fr}
-    .tt-row{flex-direction:column; align-items:center; gap:16px; padding-top:24px}
-    .tt-row::before{display:none}
-    .tt-col{max-width:420px; width:100%}
-    .tt-col::before{top:-24px; height:20px}
-    .tt-col .arr{top:-8px}
   }
   @media (max-width:700px){ .hero .dots{display:none} }
   @media (max-width:600px){
@@ -352,9 +311,25 @@
     .g2,.g3{grid-template-columns:1fr}
     .foot-inner{grid-template-columns:1fr}
     .top{padding:0 16px}
-    .node-card .ndesc{padding-left:20px}
   }
   @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important; transition:none!important}}
+  .scanners{display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 6px}
+  .schip{display:inline-flex; align-items:center; gap:9px; padding:8px 14px; border:1px solid var(--line); border-radius:999px; background:var(--bg); box-shadow:var(--shadow-sm); font-size:13px}
+  .schip .sd{width:8px;height:8px;border-radius:50%;flex:none}
+  .schip b{font-family:"Poppins"; font-weight:600; color:var(--ink)}
+  .schip>span:last-child{color:var(--muted); font-size:12px}
+  .step-lbl{font-size:14px; color:var(--ink); font-weight:500; margin:16px 0 0}
+  :not(pre)>code{background:var(--tint); color:var(--purple); padding:1px 6px; border-radius:6px; font-size:12.5px}
+  .cmd{position:relative; margin:10px 0 0; border-radius:12px; overflow:hidden; border:1px solid #2a1b45; background:#1c1030}
+  .cmd-head{display:flex; align-items:center; justify-content:space-between; padding:7px 14px; background:#241338; border-bottom:1px solid #34244f}
+  .cmd-head .lbl{font-family:"JetBrains Mono"; font-size:10px; letter-spacing:.09em; text-transform:uppercase; color:#b6a3d6}
+  .cmd-copy{font-family:"JetBrains Mono"; font-size:11px; font-weight:600; color:#cdbff0; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.16); border-radius:7px; padding:4px 11px; cursor:pointer; transition:.15s}
+  .cmd-copy:hover{background:rgba(255,255,255,.13); color:#fff}
+  .cmd-copy.done{color:#8fe3c9; border-color:rgba(143,227,201,.45)}
+  .cmd pre{margin:0; padding:14px 16px; overflow-x:auto}
+  .cmd pre code{font-family:"JetBrains Mono"; font-size:12.5px; line-height:1.65; color:#e7ddfb; white-space:pre; background:none; padding:0; border-radius:0}
+  .callout.warn{background:#FBF3DD; border-color:#EBD9A6}
+  .callout.warn .ci{color:#B07A12}
 </style>
 </head>
 <body>
@@ -387,6 +362,7 @@
       <a href="#what"><span class="dot"></span>What is EQI?</a>
       <a href="#types"><span class="dot"></span>Ways to generate EQI</a>
       <a href="#levels"><span class="dot"></span>Levels &amp; categories</a>
+      <a href="#generate"><span class="dot"></span>How to generate report</a>
       <a href="#upload"><span class="dot"></span>How to upload report</a>
       <a href="#tools"><span class="dot"></span>Supported tools</a>
       <a href="#how"><span class="dot"></span>How it works</a>
@@ -481,7 +457,7 @@
                     <li>
                       <div class="tnode">
                         <span class="tn-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>
-                        <div class="tn-body"><b>Mindbowser GitHub Projects</b><span class="tn-tag">Internal</span><p>Internal repos wired into the standard pipeline.</p></div>
+                        <div class="tn-body"><b>Mindbowser GitHub Projects</b><span class="tn-tag">Internal · Fixed-cost</span><p>Internal repos wired into the standard pipeline.</p></div>
                       </div>
                     </li>
                     <li>
@@ -544,6 +520,102 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- How to Generate Report -->
+    <section id="generate" class="block">
+      <div class="wrap">
+        <span class="eyebrow"><svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M7 5l8 7-8 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Local scanning guide</span>
+        <h2 class="title">How to generate report</h2>
+        <p class="lead">Five SecOps scans normally run through CI/CD and report to the EQI dashboard automatically. This guide reproduces the exact same reports on your own machine, for a quick check before you push, so you can upload them to EQI yourself.</p>
+
+        <div class="scanners">
+          <span class="schip"><span class="sd" style="background:#7133AE"></span><b>Trivy</b><span>deps + IaC</span></span>
+          <span class="schip"><span class="sd" style="background:#C8403C"></span><b>Gitleaks</b><span>secrets</span></span>
+          <span class="schip"><span class="sd" style="background:#38B8B3"></span><b>OSV</b><span>dependencies</span></span>
+          <span class="schip"><span class="sd" style="background:#C98415"></span><b>ZAP</b><span>DAST</span></span>
+          <span class="schip"><span class="sd" style="background:#8E56CD"></span><b>SonarQube</b><span>SAST</span></span>
+        </div>
+
+        <h3 class="sub-h"><span class="gnum">1</span>Prerequisites</h3>
+        <p class="sub-p">Docker is the only requirement &mdash; and it must be running before you start a scan. Every scanner runs inside a Docker container, so if Docker isn&rsquo;t up, no reports are generated.</p>
+        <div class="callout warn"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 4 2.3 18a2 2 0 0 0 1.7 3h16a2 2 0 0 0 1.7-3L13.7 4a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg><p>Confirm Docker is running with <code>docker info</code> before you scan. The script checks this up front and exits early with a clear message if the daemon isn&rsquo;t up.</p></div>
+
+        <h3 class="sub-h"><span class="gnum">2</span>Get the script</h3>
+        <p class="sub-p">Save your team&rsquo;s <code>local-secops-scan.sh</code> anywhere on your machine and make it executable.</p><div class="cmd"><div class="cmd-head"><span class="lbl">terminal</span><button class="cmd-copy" type="button">Copy</button></div><pre><code>chmod +x local-secops-scan.sh</code></pre></div>
+
+        <h3 class="sub-h"><span class="gnum">3</span>All flags</h3>
+        <div class="table-wrap" style="margin-top:16px"><div class="table-scroll"><table>
+          <thead><tr><th>Flag</th><th>Default</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td><code>--repo-path</code></td><td class="cat-chip">current dir</td><td class="cat-chip">Repo to scan</td></tr>
+            <tr><td><code>--target-url</code></td><td class="cat-chip">&mdash;</td><td class="cat-chip">Frontend URL for ZAP; ZAP is skipped if unset</td></tr>
+            <tr><td><code>--backend-target-url</code></td><td class="cat-chip">&mdash;</td><td class="cat-chip">Backend URL for ZAP; backend scan skipped if unset</td></tr>
+            <tr><td><code>--sonar-sources</code></td><td class="cat-chip">apps/api/src,apps/web/src</td><td class="cat-chip">Comma-separated source dirs for Sonar</td></tr>
+            <tr><td><code>--sonar-host</code></td><td class="cat-chip">&mdash;</td><td class="cat-chip">SonarQube URL; Sonar is skipped if unset</td></tr>
+            <tr><td><code>--sonar-token</code></td><td class="cat-chip">&mdash;</td><td class="cat-chip">SonarQube auth token; Sonar is skipped if unset</td></tr>
+            <tr><td><code>--sonar-project-key</code></td><td class="cat-chip">repo folder name</td><td class="cat-chip">Set to your CI/EQI project name so repos under a different folder name don&rsquo;t create duplicates</td></tr>
+            <tr><td><code>--sonar-run-scan</code></td><td class="cat-chip">off (read-only)</td><td class="cat-chip">Run sonar-scanner before reading &mdash; needed only the first time a project is analysed</td></tr>
+            <tr><td><code>--skip</code></td><td class="cat-chip">&mdash;</td><td class="cat-chip">Comma list to omit: trivy,gitleaks,osv,zap,sonar</td></tr>
+          </tbody>
+        </table></div></div>
+
+        <h3 class="sub-h"><span class="gnum">4</span>Full run &mdash; all five scanners</h3>
+        <p class="sub-p">With the app and a SonarQube server both running, one command generates every report. ZAP&rsquo;s full active scan is the slow part &mdash; budget 5&ndash;20 minutes; everything else finishes in a minute or two.</p><div class="cmd"><div class="cmd-head"><span class="lbl">terminal</span><button class="cmd-copy" type="button">Copy</button></div><pre><code>./local-secops-scan.sh \
+  --repo-path ~/code/my-repo \
+  --target-url http://localhost:3000 \
+  --backend-target-url http://localhost:8080 \
+  --sonar-host http://localhost:9000 \
+  --sonar-token &lt;paste-your-token&gt; \
+  --sonar-project-key my-repo</code></pre></div>
+        <p class="sub-p" style="margin-top:16px">Prefer to run scanners individually? Each option below uses the same script with a <code>--skip</code> list.</p>
+
+        <h3 class="sub-h"><span class="gnum">5</span>Static scans &mdash; Trivy, Gitleaks, OSV</h3>
+        <p class="sub-p">These three read source code only &mdash; nothing needs to be running. Point <code>--repo-path</code> at your actual project.</p><div class="cmd"><div class="cmd-head"><span class="lbl">terminal</span><button class="cmd-copy" type="button">Copy</button></div><pre><code>./local-secops-scan.sh --repo-path ~/code/my-repo --skip zap,sonar</code></pre></div>
+        <div class="callout warn"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 4 2.3 18a2 2 0 0 0 1.7 3h16a2 2 0 0 0 1.7-3L13.7 4a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg><p>If Gitleaks or OSV produce no report, it&rsquo;s almost always Docker not running &mdash; <code>docker info</code> is checked up front and the script exits early with a clear message rather than failing silently.</p></div>
+
+        <h3 class="sub-h"><span class="gnum">6</span>ZAP &mdash; needs a running app</h3>
+        <p class="sub-p">ZAP attacks a live URL, not source code. Start your dev server first (e.g. <code>npm run dev</code>), note the port(s), then pass the address(es).</p><div class="cmd"><div class="cmd-head"><span class="lbl">terminal</span><button class="cmd-copy" type="button">Copy</button></div><pre><code>./local-secops-scan.sh --repo-path ~/code/my-repo \
+  --target-url http://localhost:3000 \
+  --backend-target-url http://localhost:8080 \
+  --skip trivy,gitleaks,osv,sonar</code></pre></div>
+        <div class="callout tip"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12c.7.7 1 1.3 1 2h6c0-.7.3-1.3 1-2a7 7 0 0 0-4-12Z"/></svg><p>You can write <code>localhost</code> here &mdash; the script rewrites it to <code>host.docker.internal</code> so the ZAP container can reach an app running on your host. A container&rsquo;s own &ldquo;localhost&rdquo; is itself, not your laptop &mdash; the #1 reason ZAP silently produces nothing.</p></div>
+
+        <h3 class="sub-h"><span class="gnum">7</span>SonarQube &mdash; read a report</h3>
+        <p class="sub-p">By default the script doesn&rsquo;t trigger a new analysis &mdash; it reads the report for a project already analysed by CI or an earlier run. Generate a token in SonarQube (<b>My Account &rarr; Security &rarr; Generate Token</b> &mdash; shown only once), then read the report.</p><div class="cmd"><div class="cmd-head"><span class="lbl">terminal</span><button class="cmd-copy" type="button">Copy</button></div><pre><code>./local-secops-scan.sh --repo-path ~/code/my-repo \
+  --sonar-host http://localhost:9000 \
+  --sonar-token &lt;paste-your-token&gt; \
+  --sonar-project-key my-repo \
+  --skip trivy,gitleaks,osv,zap</code></pre></div>
+        <p class="sub-p" style="margin-top:16px">The file written to <code>sonarqube/sonarqube-report.json</code> includes the full issue list plus summary (coverage, bugs, vulnerabilities, code smells, duplication) and <code>qualityGate</code> status.</p>
+        <div class="callout warn"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 4 2.3 18a2 2 0 0 0 1.7 3h16a2 2 0 0 0 1.7-3L13.7 4a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg><p>If the project has never been analysed on that server, this returns an empty/failed response. Add <code>--sonar-run-scan</code> to analyse first, then read the report in the same run.</p></div>
+        <p class="sub-p" style="margin-top:18px"><b>Run a fresh analysis</b> &mdash; only needed the first time a project is scanned locally, or for findings the pipeline hasn&rsquo;t produced yet (slower; runs <code>sonar-scanner</code> first).</p><div class="cmd"><div class="cmd-head"><span class="lbl">terminal</span><button class="cmd-copy" type="button">Copy</button></div><pre><code>./local-secops-scan.sh --repo-path ~/code/my-repo \
+  --sonar-host http://localhost:9000 \
+  --sonar-token &lt;paste-your-token&gt; \
+  --sonar-project-key my-repo \
+  --sonar-run-scan \
+  --skip trivy,gitleaks,osv,zap</code></pre></div>
+        <p class="sub-p" style="margin-top:18px"><b>No server yet?</b> Start one locally, wait ~60&ndash;90s, open <code>localhost:9000</code>, log in with <code>admin / admin</code>, set a password, then generate a token. The first scan needs <code>--sonar-run-scan</code>.</p><div class="cmd"><div class="cmd-head"><span class="lbl">terminal</span><button class="cmd-copy" type="button">Copy</button></div><pre><code>docker run -d --name sonarqube -p 9000:9000 sonarqube:community</code></pre></div>
+        <div class="callout tip"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12c.7.7 1 1.3 1 2h6c0-.7.3-1.3 1-2a7 7 0 0 0-4-12Z"/></svg><p>Always pass <code>--sonar-project-key</code> set to the same project name your CI/EQI workflow uses &mdash; otherwise a repo checked out under a different folder name creates a duplicate project instead of reading your team&rsquo;s history. Scanning several repos with <code>--sonar-run-scan</code>? Do them one at a time &mdash; a laptop-sized server runs out of memory if analyses queue in parallel.</p></div>
+
+        <h3 class="sub-h"><span class="gnum">8</span>Where reports land</h3>
+        <p class="sub-p">All output goes under <code>&lt;repo&gt;/secops-reports/</code>, one folder per tool. A markdown summary table also prints to the terminal at the end of every run.</p>
+        <div class="table-wrap" style="margin-top:16px"><div class="table-scroll"><table>
+          <thead><tr><th>Tool</th><th>Path</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tool">Trivy</span> <span class="cat-chip">fs / IaC / SBOM</span></td><td><code>trivy/</code></td></tr>
+            <tr><td><span class="tool">Gitleaks</span></td><td><code>gitleaks/gitleaks-report.json</code></td></tr>
+            <tr><td><span class="tool">OSV</span></td><td><code>osv/osv-report.json</code></td></tr>
+            <tr><td><span class="tool">ZAP frontend</span></td><td><code>zap/frontend/</code></td></tr>
+            <tr><td><span class="tool">ZAP backend</span></td><td><code>zap/backend/</code></td></tr>
+            <tr><td><span class="tool">SonarQube</span></td><td><code>sonarqube/sonarqube-report.json</code></td></tr>
+          </tbody>
+        </table></div></div>
+
+        <h3 class="sub-h"><span class="gnum">9</span>Upload to the EQI dashboard</h3>
+        <p class="sub-p">Once a scan finishes, upload each report yourself through the dashboard &mdash; this replaces the automatic upload CI does on your behalf. Sign in, open your project (it must match the <code>project_name</code> your CI uses), go to <b>Upload Report</b>, pick the scanner type, and select the matching JSON from <code>secops-reports/</code>. Each report uploads separately &mdash; there&rsquo;s no combined file.</p>
+        <div class="callout note"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><p>Local runs are for a fast pre-push check. CI remains the source of truth for EQI&rsquo;s tracked history &mdash; don&rsquo;t skip the pipeline run in favour of a local one. Full step-by-step upload instructions are in <a href="#upload">How to upload report</a>.</p></div>
       </div>
     </section>
 
@@ -897,19 +969,34 @@
   }, {rootMargin: "-45% 0px -50% 0px", threshold:0});
   Array.prototype.slice.call(document.querySelectorAll("main section[id]")).forEach(function(s){ spy.observe(s); });
 
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab[role="tab"]'));
-  tabs.forEach(function(t){
-    t.addEventListener("click", function(){
-      tabs.forEach(function(x){
-        var sel = x===t;
-        x.setAttribute("aria-selected", sel?"true":"false");
-        var panel = document.getElementById(x.getAttribute("aria-controls"));
-        if(panel) panel.hidden = !sel;
+  document.querySelectorAll('.tabs[role="tablist"]').forEach(function(group){
+    var tabs = Array.prototype.slice.call(group.querySelectorAll('.tab[role="tab"]'));
+    tabs.forEach(function(t){
+      t.addEventListener("click", function(){
+        tabs.forEach(function(x){
+          var sel = x===t;
+          x.setAttribute("aria-selected", sel?"true":"false");
+          var panel = document.getElementById(x.getAttribute("aria-controls"));
+          if(panel) panel.hidden = !sel;
+        });
       });
     });
   });
 
   var yr=document.getElementById("yr"); if(yr) yr.textContent=new Date().getFullYear();
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.cmd-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var code=btn.closest('.cmd').querySelector('code');
+      var text=code?code.innerText:'';
+      var done=function(){btn.textContent='Copied';btn.classList.add('done');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('done');},1500);};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,function(){done();});}
+      else{try{var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();document.execCommand('copy');document.body.removeChild(ta);done();}catch(e){}}
+    });
+  });
 })();
 </script>
 </body>
